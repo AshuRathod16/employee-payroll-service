@@ -13,9 +13,6 @@ public class EmployeePayrollService {
         this.employeePayrollList = employeePayrollList;
     }
 
-    public EmployeePayrollService() {
-    }
-
     // Main Method
     public static void main(String[] args) {
         System.out.println("Welcome To Employee Payroll Problem");
@@ -51,5 +48,12 @@ public class EmployeePayrollService {
         if (ioService.equals(IOService.FILE_IO))
             return new EmployeePayrollFileIOService().countEntries();
         return 0;
+    }
+
+    // Method to print data
+    public void printData(IOService ioService){
+        if (ioService.equals(IOService.FILE_IO)) {
+            new EmployeePayrollFileIOService().printData();
+        }
     }
 }
