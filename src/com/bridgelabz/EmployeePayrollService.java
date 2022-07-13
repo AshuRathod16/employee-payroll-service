@@ -43,7 +43,7 @@ public class EmployeePayrollService {
             new EmployeePayrollFileIOService().writeData(employeePayrollList);
     }
 
-    // Method to count entries
+    // Method to count no of entries
     public long countEntries(IOService ioService) {
         if (ioService.equals(IOService.FILE_IO))
             return new EmployeePayrollFileIOService().countEntries();
@@ -51,7 +51,7 @@ public class EmployeePayrollService {
     }
 
     // Method to print data
-    public void printData(IOService ioService){
+    public void printData(IOService ioService) {
         if (ioService.equals(IOService.FILE_IO)) {
             new EmployeePayrollFileIOService().printData();
         }

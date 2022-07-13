@@ -2,6 +2,7 @@ package com.bridgelabz;
 
 import org.junit.Assert;
 import org.junit.Test;
+
 import java.util.Arrays;
 
 public class EmployeePayrollServiceTest {
@@ -19,5 +20,6 @@ public class EmployeePayrollServiceTest {
         long entries = employeePayrollService.countEntries(EmployeePayrollService.IOService.FILE_IO);
         Assert.assertEquals(3, entries);
         employeePayrollService.printData(EmployeePayrollService.IOService.FILE_IO);
+        System.out.println("Employee payroll service entries are:" + entries);
     }
 }
